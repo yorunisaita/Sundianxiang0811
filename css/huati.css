@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    min-height: 932px;
+}
+
+/* 顶部导航 */
+.sun_header {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: #003366;
+    gap: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 搜索栏 */
+.sun_search_bar {
+    width: 80%;
+    background-color: rgb(219, 218, 218);
+    border-radius: 20px;
+    padding: 8px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #545454;
+    font-size: 14px;
+    margin: 0 auto;
+    flex: none;
+}
+
+.sun_search_bar span {
+    flex: 1;
+    text-align: left;
+    margin-right: 8px;
+}
+
+/* 主要内容区 */
+.sun_main_content {
+    margin-top: 56px;
+    background-color: #fff;
+}
+
+.sun_hot_topic {
+    padding: 15px 15px 0;
+    background-color: #fff;
+}
+
+.sun_topic_info {
+    display: flex;
+    gap: 12px;
+}
+
+.sun_topic_info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+.sun_topic_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sun_topic_title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.sun_hot_tag {
+    display: inline-block;
+    background-color: #ff9406;
+    color: white;
+    font-size: 12px;
+    padding: 1px 4px;
+    border-radius: 2px;
+    margin-left: 8px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.sun_topic_meta {
+    display: flex;
+    gap: 15px;
+    color: #999;
+    font-size: 13px;
+}
+
+.sun_topic_desc {
+    font-size: 13px;
+    color: #999;
+}
+
+.sun_topic_content {
+    font-size: 14px;
+    color: #333;
+    margin-top: 12px;
+    padding-left: 0;
+    display: flex;
+    gap: 5px;
+}
+
+.sun_topic_content span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sun_more {
+    color: #3171f9;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.sun_rank_tag {
+    color: #ff8200;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 4px 8px;
+    background-color: #fff5e6;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 0;
+}
+
+/* 标签导航 */
+.sun_nav_tabs {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    padding: 12px 15px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 24px;
+    align-items: center;
+}
+
+.sun_tab {
+    padding: 8px 0;
+    font-size: 15px;
+    color: #666;
+    position: relative;
+    white-space: nowrap;
+    flex: none;
+}
+
+.sun_active {
+    color: #ff8200;
+    font-weight: 500;
+}
+
+.sun_active::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff8200;
+}
+
+/* 新闻内容 */
+.sun_news_item {
+    padding: 15px;
+    background: #fff;
+    margin-top: 0;
+}
+
+.sun_news_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sun_publisher_info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sun_publisher_avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.sun_publisher_detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sun_publisher_name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.sun_publish_time {
+    font-size: 12px;
+    color: #999;
+}
+
+.sun_follow_btn {
+    padding: 5px 12px;
+    border: 1px solid #ff8200;
+    border-radius: 15px;
+    color: #ff8200;
+    background: none;
+    font-size: 13px;
+}
+
+.sun_news_body {
+    margin-top: 10px;
+}
+
+.sun_news_text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sun_news_image {
+    width: 100%;
+    margin-top: 8px;
+    position: relative;
+}
+
+.sun_news_image img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* 图片和视频 */
+.sun_video_title {
+    position: absolute;
+    padding: 5px 15px 15px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.4;
+    border-radius: 0 0 8px 8px;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.sun_video_info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.sun_video_views, .sun_video_duration {
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 底部导航 */
+.sun_safe_area_bottom {
+    height: 84px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.sun_bottom_search {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 10px;
+}
+
+.sun_bottom_text {
+    flex: 1;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    color: #757474;
+    gap: 8px;
+}
+
+.sun_bottom_icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* 图标通用样式 */
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    vertical-align: middle;
+    font-family: 'iconfont' !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 图标颜色设置 */
+.sun_header .icon {
+    color: #ffffff;
+}
+
+.sun_search_bar .icon {
+    color: #666;
+}
+
+.sun_bottom_text .icon {
+    color: #000;
+    margin-right: 8px;
+}
+
+.sun_bottom_icons .icon {
+    color: #000;
+    width: 24px;
+    height: 24px;
+}
+
+/* 修改新闻底部交互按钮的样式 */
+.sun_interaction {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.sun_action_item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #999;
+    font-size: 14px;
+}

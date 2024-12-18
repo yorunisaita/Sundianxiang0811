@@ -1,0 +1,274 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    min-height: 1500px;
+}
+
+/* 搜索栏 */
+.sun_search-bar {
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    position: relative;
+}
+
+.sun_search-bar form {
+    flex: 1;
+}
+
+.sun_search-bar input {
+    width: 100%;
+    padding: 8px 15px;
+    padding-right: 50px;
+    border: 1px solid #ff8200;
+    border-radius: 20px;
+    background: #fff;
+    font-size: 14px;
+    height: 36px;
+}
+
+.sun_search-bar input::placeholder {
+    color: #999;
+}
+
+.sun_search-text {
+    position: absolute;
+    right: 25px;
+    color: #ff8200;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+/* 导航栏 */
+.sun_nav-bar {
+    display: flex;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    background: #f7f7f7;
+}
+
+.sun_nav-item {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    color: #666;
+    padding: 5px 0;
+}
+
+.sun_nav-item:first-child {
+    color: #ff8200;
+    font-weight: normal;
+    position: relative;
+}
+
+.sun_nav-item:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #ff8200;
+}
+
+/* 热搜提示 */
+.sun_hot-tips {
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+    background: #fff7e6;
+    font-size: 12px;
+    border-radius: 8px;
+    margin: 3px 15px 0;
+}
+
+.sun_hot-tips span:first-child {
+    color: #ff8200;
+}
+
+.sun_hot-tips a {
+    color: #0066cc;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.sun_hot-tips a:hover {
+    opacity: 0.8;
+}
+
+.sun_hot-tips .sun_close {
+    margin-left: auto;
+    color: #999;
+    cursor: pointer;
+    padding: 0 5px;
+    font-size: 14px;
+    user-select: none;
+}
+
+.sun_hot-tips .sun_close:hover {
+    color: #666;
+}
+
+/* 热搜区域 */
+.sun_hot-title {
+    padding: 10px 15px 1px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sun_hot-title span {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.sun_hot-list {
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sun_hot-item {
+    width: calc(50% - 8px);
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    gap: 4px;
+}
+
+.sun_hot-item .sun_title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+    flex: 1;
+}
+
+.sun_hot-item.sun_more-hot .sun_title {
+    color: #ff8200;
+    font-size: 13px;
+}
+
+/* 广告区域 */
+.sun_advertisement {
+    width: 100%;
+    margin: 8px auto;
+    position: relative;
+    max-width: 800px;
+}
+
+.sun_advertisement img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.sun_ad-tag {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: rgba(0,0,0,0.3);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-size: 12px;
+    z-index: 2;
+}
+
+/* 图标导航 */
+.sun_icon-nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 15px 0;
+    margin-bottom: -10px;
+}
+
+.sun_icon-nav .sun_nav-item1 {
+    width: 16.666%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+    height: 70px;
+    justify-content: flex-start;
+}
+
+.sun_icon-nav span {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+.sun_icon-nav .sun_icon {
+    width: 30px;
+    height: 30px;
+}
+
+.sun_icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.sun_tag {
+    font-size: 12px;
+    padding: 1px 4px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    height: 16px;
+    line-height: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.sun_tag.sun_hot {
+    background: #ff3852;
+    color: white;
+}
+
+.sun_tag.sun_new {
+    background: #ff9406;
+    color: white;
+}
+
+/* 修改轮播图相关样式 */
+.sun_lunbo {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    padding-bottom: 56.25%;
+    background-color: #f5f5f5;
+}
+
+.sun_lunbo img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+}

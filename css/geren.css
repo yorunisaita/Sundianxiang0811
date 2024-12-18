@@ -1,0 +1,317 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f8f8;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+.sun_icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/* 顶部区域 */
+.sun_top-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #fff;
+}
+
+.sun_right {
+    display: flex;
+    gap: 25px;
+    padding-right: 10px;
+    color: #666;
+}
+
+/* 用户信息区域 */
+.sun_user-info {
+    display: flex;
+    padding: 20px 15px;
+    gap: 15px;
+    align-items: flex-start;
+    background: #fff;
+}
+
+.sun_user-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.sun_username {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sun_edit-profile {
+    background: #f8f8f8;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #666;
+    flex-shrink: 0;
+}
+
+.sun_bio {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* 社交 */
+.sun_social {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+
+.sun_item {
+    text-align: center;
+}
+
+.sun_num {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.sun_label {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 功能菜单 */
+.sun_function {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px 15px;
+    gap: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.sun_function-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.sun_function-item .sun_icon {
+    font-size: 26px;
+    color: #666;
+    width: 1em;
+    height: 1em;
+}
+
+.sun_function-item span {
+    font-size: 0.8em;
+    color: #666;
+    font-weight: 500;
+}
+
+/* 任务中心 */
+.sun_task-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.sun_task-item {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    transition: background-color 0.2s;
+}
+
+.sun_task-item .sun_icon {
+    width: 30px;
+    height: 30px;
+}
+
+.sun_task-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sun_task-title {
+    font-size: 13px;
+    color: #333;
+    font-weight: 500;
+}
+
+.sun_task-desc {
+    font-size: 11px;
+    color: #999;
+}
+
+.sun_sign-in-btn {
+    background: #ff8200;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* 我的钱包 */
+.sun_wallet-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.sun_wallet-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.sun_wallet-box,
+.sun_visitor-box,
+.sun_task-center {
+    margin: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.sun_task-center {
+    padding: 0;
+    overflow: hidden;
+}
+
+.sun_wallet-header,
+.sun_visitor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sun_wallet,
+.sun_visitor {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sun_wallet .sun_icon,
+.sun_visitor .sun_icon {
+    font-size: 14px;
+    color: #999;
+}
+
+.sun_wallet-title,
+.sun_visitor-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 主页访客 */
+.sun_visitor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sun_visitor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.sun_visitor-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sun_visitor-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+.sun_visitor-avatar {
+    width: 45px;
+    height: 45px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun_visitor-avatar img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.3;
+}
+
+.sun_visitor-avatars {
+    display: flex;
+    align-items: center;
+}
+
+.sun_visitor-avatars img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-left: -6px;
+}
+
+.sun_visitor-avatars img:first-child {
+    margin-left: 0;
+}
+
+.sun_wallet-label,
+.sun_visitor-count,
+.sun_visitor-desc,
+.sun_detail-text {
+    font-size: 11px;
+    color: #999;
+}

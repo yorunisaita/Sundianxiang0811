@@ -1,0 +1,88 @@
+/* 底部导航 */
+.sun_bottom_nav {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    display: flex;
+    z-index: 100;
+    border-top: 1px solid #eee;
+    padding: 5px 0;
+}
+
+/* 添加全局链接样式 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover, a:visited, a:active {
+    color: inherit;
+}
+
+.sun_nav_item {
+    width: 20%;
+    text-align: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+.sun_nav_item p {
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.2;
+    transition: all 0.2s;
+}
+
+.sun_icon {
+    vertical-align: -0.15em;
+    fill: #aaa;
+    overflow: hidden;
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: all 0.2s;
+}
+
+/* 修改激活状态的样式 */
+.sun_nav_item.sun_active p,
+.sun_nav_item.sun_active .sun_icon {
+    color: #ff8200;
+    font-weight: bold;
+}
+
+.sun_nav_item.sun_active .sun_icon {
+    transform: scale(1.1);
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 1200px) {
+    .sun_nav_item p {
+        font-size: 0.9rem;
+    }
+    .sun_icon {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .sun_nav_item p {
+        font-size: 0.8rem;
+    }
+    .sun_icon {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sun_nav_item p {
+        font-size: 0.7rem;
+    }
+    .sun_icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
